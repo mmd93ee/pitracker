@@ -1,3 +1,13 @@
 1. Reboot to check powerup_gsm.py works through init.d
 2. Run raspi-config and enable Serial Interface
+3. Serial is /dev/ttyAMA0
+
+
+
+>>> IGNORE 3. Connect to minicom (minicom -D /dev/ttyS0)
+
+Tools:
+cgps -s
+gpspipe
+gpsmon
 

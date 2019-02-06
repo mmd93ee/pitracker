@@ -14,16 +14,26 @@
 
 
 import RPi.GPIO as GPIO
+import serial
 import time
+
+ser = serial.Serial("/dev/ttyAMA0",115200)
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.OUT)
 
+# Start the hat
 while True:
    GPIO.output(7, GPIO.LOW)
    time.sleep(4)
    GPIO.output(7, GPIO.HIGH)
    break
 
+# Power up the GPS component of the hat
+write_buffer = ["AT+CGNSPWR=1\r\n", "AT+CGNSSEQ=\"RMS\"\r\n", "AT+CGNSINF\r\n", "AT+CGNSURC=2\r\n", "AT+CGNSTST=1\r\n"]
+ser.write(write_buffer[0])
+ser.flushInput()
+
+# Finish up...
 GPIO.cleanup()
 
