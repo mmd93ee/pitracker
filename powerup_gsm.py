@@ -7,7 +7,7 @@ GPIO.setup(7, GPIO.out)
 while True:
    GPIO.output(7, GPIO.LOW)
    time.sleep(4)
-   GPIO.output(7. GPIO.HIGH)
+   GPIO.output(7, GPIO.HIGH)
    break
 
 GPIO.cleanup()

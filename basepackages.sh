@@ -10,9 +10,3 @@ sudo apt-get install -y git
 cd ~
 git clone https://github.com/mmd93ee/pitracker.git
 cd pitracker
-
-
-# Powerup the hat
-./powerup_gsm.py
-
-
