@@ -9,4 +9,11 @@ sudo apt-get install -y git
 # Clone repo to pi
 cd ~
 git clone https://github.com/mmd93ee/pitracker.git
-cd pitracker
+
+# Copy power script to init.d and enable
+sudo cp ./pitracker/powerup_gsm.py /etc/init.d/
+sudo update-rc.d powerup_gsm.py defaults
+
+# Post deploy messages
+cat ./messages.txt
+
