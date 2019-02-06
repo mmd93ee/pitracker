@@ -1,5 +1,5 @@
 1. Reboot to check powerup_gsm.py works through init.d
-2. Run raspi-config and enable Serial Interface
+2. Run raspi-config and disable Logins Over Serial but enable Serial Interface
 3. Serial is /dev/ttyAMA0
 
 
