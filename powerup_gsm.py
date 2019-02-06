@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 # /etc/init.d/powerup_gsm.py
-# BEGIN INIT INFO
+
+### BEGIN INIT INFO
 # Provides:		powerup_gsm.py
 # Required-Start:	
 # Required-Stop:
@@ -9,7 +10,7 @@
 # Default-Stop:		0 1 6
 # Short-Description:	Power Up GSM Module
 # Description:		Enable GSM module to auto power up when pi is booted
-# END INIT INFO
+### END INIT INFO
 
 
 import RPi.GPIO as GPIO
